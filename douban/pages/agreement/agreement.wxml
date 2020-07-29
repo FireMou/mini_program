@@ -1,0 +1,4 @@
+<!--pages/agreement/agreement.wxml-->
+<!-- 个人版不支持打开网页 -->
+<web-view src="www.baidu.com" bindmessage=""></web-view>
+  

@@ -1,0 +1,15 @@
+<!--pages/profile/profile.wxml-->
+<view>
+    <view class="login-wrapper">
+        <image class="" src="/assets/imgs/bg_mine_login.png" mode="aspectFill" />
+          
+        <view class="login">登录</view>
+    </view>
+
+    <view>
+        
+    </view>
+      
+
+    <view class="version">版本1.0.39</view>
+</view>
