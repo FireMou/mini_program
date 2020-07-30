@@ -6,10 +6,21 @@
         <view class="login">登录</view>
     </view>
 
-    <view>
-        
+    <view class="items-wrapper">
+        <view class="title-wrapper">
+            <view class="title">我的书影音</view>
+            <view class="check">
+                登录查看
+                <view class="arrow"></view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="item">
+                <image class="icon" src="/assets/imgs/ic_cat_music.png" />
+                
+            </view>
+        </view>
     </view>
-      
-
+    
     <view class="version">版本1.0.39</view>
 </view>
