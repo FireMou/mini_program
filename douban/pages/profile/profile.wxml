@@ -14,27 +14,26 @@
                 <view class="arrow"></view>
             </view>
         </view>
-        <view class="items">
+        <view class="items" wx:for="{{items}}" wx:key="unique">
             <view class="item">
-                <image class="icon" src="/assets/imgs/ic_cat_music.png" />
+                <image class="icon" src="/assets/imgs/{{item.icon}}.png" />
                 <view class="info-wrapper">
                     <view class="info">
                         <view class="left">
-                            <view class="top">观影分析</view>
+                            <view class="top">{{item.title}}</view>
                             <view class="bottom">
-                                <view class="count">0</view>
-                                <view class="count-des">看过</view>
+                                <view class="count">{{item.count}}</view>
+                                <view class="count-des">{{item.countDes}}</view>
                             </view>
                         </view>
                         <view class="right">
-                            <text class="des">标记10部影片\n开启观影分析</text>
+                            <text class="des">{{item.itemDes}}</text>
                             <view class="open-wrapper">
                                 <view class="open">立即开启</view>
                                 <view class="arrow"></view>
                             </view>
                         </view>
                     </view>
-
                     <view class="divider"></view>
                 </view>
             </view>
