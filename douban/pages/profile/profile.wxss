@@ -33,6 +33,7 @@
     line-height: 100rpx;
     text-align: center;
     font-size: 40rpx;
+    box-shadow: 4rpx 4rpx 4rpx rgba(0, 0, 0, 0.2);
 }
 
 .login-wrapper image {
@@ -44,7 +45,113 @@
     height: 100%;
 }
 
-.items-wrapper .title-wrapper {
-    /* justify-content: left; */
-    align-items: left;
+.items-wrapper {
+    margin-top: 20rpx;
+}
+
+.items-wrapper .arrow {
+    width: 20rpx;
+    height: 20rpx;
+    margin-left: 10rpx;
+    border: 2px solid #818181;
+    border-left: none;
+    border-bottom: none;
+    transform: rotate(45deg);
+}
+
+.title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30rpx;
+    padding-right: 30rpx;
+    align-items: center;
+}
+
+.title-wrapper .title {
+    color: #161616;
+}
+
+.title-wrapper .check {
+    display: flex;
+    font-size: 30rpx;
+    color: #818181;
+    align-items: center;
+}
+
+.items .info-wrapper {
+    flex: 1;
+    margin-right: 20rpx;
+    position: relative;
+}
+
+.items .item {
+    display: flex;
+    align-items: center;
+    padding-top: 30rpx;
+}
+
+.item .icon {
+    width: 108rpx;
+    height: 108rpx;
+    padding-left: 30rpx;
+}
+
+.info-wrapper .info {
+    display: flex;
+    align-items: center;
+}
+
+.info .left .top {
+    color: #191919;
+    font-size: 32rpx;
+}
+
+.info .left .bottom {
+    display: flex;
+    color: #818181;
+    align-items: flex-end;
+}
+
+.info .left .count {
+    font-size: 48rpx;
+}
+
+.info .left .count-des {
+    padding-bottom: 10rpx;
+    margin-left: 20rpx;
+    font-size: 32rpx;
+}
+
+.info .right {
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.info .right .des {
+    color: #BBBBBB;
+    font-size: 32rpx;
+    margin-right: 40rpx;
+}
+
+.info .right .open-wrapper {
+    display: flex;
+    align-items: center;
+    padding-right: 10rpx;
+}
+
+.info .right .open {
+    font-size: 32rpx;
+    color: #4C4C4C;
+    background-color: #F5F5F5;
+    padding: 10rpx 15rpx;
+    border-radius: 10rpx;
+}
+
+.item .divider {
+    width: 100%;
+    height: 2rpx;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    margin-top: 10rpx;
 }

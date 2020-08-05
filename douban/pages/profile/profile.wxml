@@ -17,7 +17,26 @@
         <view class="items">
             <view class="item">
                 <image class="icon" src="/assets/imgs/ic_cat_music.png" />
-                
+                <view class="info-wrapper">
+                    <view class="info">
+                        <view class="left">
+                            <view class="top">观影分析</view>
+                            <view class="bottom">
+                                <view class="count">0</view>
+                                <view class="count-des">看过</view>
+                            </view>
+                        </view>
+                        <view class="right">
+                            <text class="des">标记10部影片\n开启观影分析</text>
+                            <view class="open-wrapper">
+                                <view class="open">立即开启</view>
+                                <view class="arrow"></view>
+                            </view>
+                        </view>
+                    </view>
+
+                    <view class="divider"></view>
+                </view>
             </view>
         </view>
     </view>
