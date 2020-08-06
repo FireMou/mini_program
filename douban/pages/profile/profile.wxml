@@ -1,44 +1,49 @@
 <!--pages/profile/profile.wxml-->
-<view>
-    <view class="login-wrapper">
-        <image class="" src="/assets/imgs/bg_mine_login.png" mode="aspectFill" />
-          
-        <view class="login">登录</view>
-    </view>
+<view class="container">
 
-    <view class="items-wrapper">
-        <view class="title-wrapper">
-            <view class="title">我的书影音</view>
-            <view class="check">
-                登录查看
-                <view class="arrow"></view>
-            </view>
+    <view>
+        
+        <view class="login-wrapper">
+            <image class="" src="/assets/imgs/bg_mine_login.png" mode="aspectFill" />
+            
+            <view class="login">登录</view>
         </view>
-        <view class="items" wx:for="{{items}}" wx:key="unique">
-            <view class="item">
-                <image class="icon" src="/assets/imgs/{{item.icon}}.png" />
-                <view class="info-wrapper">
-                    <view class="info">
-                        <view class="left">
-                            <view class="top">{{item.title}}</view>
-                            <view class="bottom">
-                                <view class="count">{{item.count}}</view>
-                                <view class="count-des">{{item.countDes}}</view>
+
+        <view class="items-wrapper">
+            <view class="title-wrapper">
+                <view class="title">我的书影音</view>
+                <view class="check">
+                    登录查看
+                    <view class="arrow"></view>
+                </view>
+            </view>
+            <view class="items" wx:for="{{items}}" wx:key="unique">
+                <view class="item">
+                    <image class="icon" src="/assets/imgs/{{item.icon}}.png" />
+                    <view class="info-wrapper">
+                        <view class="info">
+                            <view class="left">
+                                <view class="top">{{item.title}}</view>
+                                <view class="bottom">
+                                    <view class="count">{{item.count}}</view>
+                                    <view class="count-des">{{item.countDes}}</view>
+                                </view>
+                            </view>
+                            <view class="right">
+                                <text class="des">{{item.itemDes}}</text>
+                                <view class="open-wrapper">
+                                    <view class="open">立即开启</view>
+                                    <view class="arrow"></view>
+                                </view>
                             </view>
                         </view>
-                        <view class="right">
-                            <text class="des">{{item.itemDes}}</text>
-                            <view class="open-wrapper">
-                                <view class="open">立即开启</view>
-                                <view class="arrow"></view>
-                            </view>
-                        </view>
+                        <view wx:if="{{ index < items.length - 1 }}" class="divider"></view>
                     </view>
-                    <view class="divider"></view>
                 </view>
             </view>
         </view>
     </view>
+      
     
     <view class="version">版本1.0.39</view>
 </view>
