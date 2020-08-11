@@ -160,6 +160,7 @@ page {
     display: flex;
     align-items: center;
     padding-right: 10rpx;
+    border: 2rpx solid black;
 }
 
 .info .right .open {
