@@ -1,0 +1,40 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+    <view class="item" wx:for="{{ movies }}" wx:key="unique" wx:for-item="movie">
+        <image class="playbill" src="{{ movie.images.large }}" />
+        <view class="title">
+            {{ movie.title }}
+        </view>
+        <view class="score">
+            <block wx:if="{{ movie.stars }}">
+                <image class="star" wx:key="unique" wx:for="{{movie.stars.on}}" src="/assets/imgs/rating_star_small_on.png" />
+                <image class="star" wx:if="{{movie.stars.half}}" src="/assets/imgs/rating_star_small_half.png" />
+                <image class="star" wx:key="unique" wx:for="{{movie.stars.off}}" src="/assets/imgs/rating_star_small_off.png" />
+                <view class="number">{{ movie.rating.average }}</view>
+            </block>
+
+            <block wx:else>
+                暂无评分
+            </block>
+        </view>
+    </view>
+
+    <view class="item" wx:if="{{ movies.length % 3 > 0}}">
+        <image class="playbill" src="" />
+        <view class="title">
+        </view>
+        <view class="score">
+        </view>
+    </view>
+
+    <view class="item" wx:if="{{ movies.length % 3 == 1}}">
+
+        <image class="playbill" src="" />
+
+        <view class="title">
+        </view>
+        <view class="score">
+        </view>
+    </view>
+
+</view>

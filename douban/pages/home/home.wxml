@@ -11,7 +11,7 @@
         <view class="row" wx:for="{{ allMovies }}" wx:key="unique">
             <view class="title-wrapper">
                 <view class="title">{{ item.title }}</view>
-                <view class="more">查看更多 <view class="arrow"></view></view>
+                <view class="more" bind:tap="pushToList" data-index="{{ index }}">查看更多 <view class="arrow"></view></view>
             </view>
             <scroll-view scroll-x="true" class="items">
                 <view class="item" wx:for="{{ item.movies }}" wx:key="unique" wx:for-item="movie">

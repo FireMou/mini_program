@@ -39,13 +39,28 @@ Page({
      */
     onLoad: function(options) {
         // this.loadCity(this.loadData);
-        this.loadCity(city => {
-            this.loadNewData(0, { 'city': city });
-        });
-        this.loadNewData(1);
-        this.loadNewData(2);
-        this.loadNewData(3);
-        this.loadNewData(4);
+        // this.loadCity(city => {
+        //     this.loadNewData(0, { 'city': city });
+        // });
+        // this.loadNewData(1);
+        // this.loadNewData(2);
+        // this.loadNewData(3);
+        // this.loadNewData(4);
+        this.loadDataFromDisk();
+    },
+
+    loadDataFromDisk: function(index) {
+        let allMovies = this.data.allMovies;
+        for (let index = 0; index < allMovies.length; index++) {
+            let category = allMovies[index];
+            wx.getStorage({
+                key: category.title,
+                success: (result) => {
+                    category.movies = result.data;
+                    this.setData(this.data);
+                }
+            });
+        }
     },
 
     loadNewData: function(index, param) {
@@ -67,6 +82,13 @@ Page({
                     category.movies.push(movie.subject || movie);
                 }
                 this.setData(this.data);
+
+                // 缓存
+                wx.setStorage({
+                    key: category.title,
+                    data: category.movies
+                });
+
             },
             fail: () => { console.log('正在上映请求失败'); }
         });
@@ -136,6 +158,15 @@ Page({
         movie.stars.half = stars - movie.stars.on * 10 != 0;
         movie.stars.off = parseInt((50 - stars) / 10);
         console.log(movie);
+    },
+
+    pushToList: function(evt) {
+        let index = evt.currentTarget.dataset.index;
+        let category = this.data.allMovies[index];
+        wx.navigateTo({
+            url: `/pages/list/list?title=${category.title}&url=${category.url}`
+        });
+
     }
 
 })
