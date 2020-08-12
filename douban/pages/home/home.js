@@ -5,6 +5,32 @@ Page({
      * 页面的初始数据
      */
     data: {
+        allMovies: [{
+                title: '影院热映',
+                url: '/v2/movie/in_theaters',
+                movies: []
+            },
+            {
+                title: '新片榜',
+                url: '/v2/movie/new_movies',
+                movies: []
+            },
+            {
+                title: '口碑榜',
+                url: '/v2/movie/weekly',
+                movies: []
+            },
+            {
+                title: '北美票房榜',
+                url: '/v2/movie/us_box',
+                movies: []
+            },
+            {
+                title: 'Top250',
+                url: '/v2/movie/top250',
+                movies: []
+            }
+        ],
         movies: []
     },
 
@@ -12,7 +38,38 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        this.loadCity(this.loadData);
+        // this.loadCity(this.loadData);
+        this.loadCity(city => {
+            this.loadNewData(0, { 'city': city });
+        });
+        this.loadNewData(1);
+        this.loadNewData(2);
+        this.loadNewData(3);
+        this.loadNewData(4);
+    },
+
+    loadNewData: function(index, param) {
+        let category = this.data.allMovies[index];
+        if (param == null) {
+            param = {};
+        }
+        param['apikey'] = '0df993c66c0c636e29ecbb5344252a4a';
+        wx.request({
+            url: `${wx.db.url}${category.url}`,
+            data: param,
+            header: { 'content-type': 'json' },
+            success: (result) => {
+                console.log(result);
+                let array = result.data.subjects;
+                for (let index = 0; index < array.length; index++) {
+                    let movie = array[index];
+                    this.updateMovie(movie.subject || movie);
+                    category.movies.push(movie.subject || movie);
+                }
+                this.setData(this.data);
+            },
+            fail: () => { console.log('正在上映请求失败'); }
+        });
     },
 
     loadData: function(city) {
@@ -22,6 +79,7 @@ Page({
                 'apikey': '0df993c66c0c636e29ecbb5344252a4a',
                 'city': city
             },
+            // data: param,
             header: { 'content-type': 'json' },
             success: (result) => {
                 console.log(result);

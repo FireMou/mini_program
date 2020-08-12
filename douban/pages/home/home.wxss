@@ -58,6 +58,10 @@
     transform: rotate(45deg);
 }
 
+.row {
+    margin-bottom: 30rpx;
+}
+
 .items {
     margin-top: 30rpx;
     white-space: nowrap;
