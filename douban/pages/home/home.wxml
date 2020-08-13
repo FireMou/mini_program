@@ -14,26 +14,11 @@
                 <view class="more" bind:tap="pushToList" data-index="{{ index }}">查看更多 <view class="arrow"></view></view>
             </view>
             <scroll-view scroll-x="true" class="items">
-                <view class="item" wx:for="{{ item.movies }}" wx:key="unique" wx:for-item="movie">
-                    <image class="playbill" src="{{ movie.images.large }}" />
-                    <view class="title">
-                        {{ movie.title }}
-                    </view>
-                    <view class="score">
-                        <block wx:if="{{ movie.stars }}">
-                            <image class="star" wx:key="unique" wx:for="{{movie.stars.on}}" src="/assets/imgs/rating_star_small_on.png" />
-                            <image class="star" wx:if="{{movie.stars.half}}" src="/assets/imgs/rating_star_small_half.png" />
-                            <image class="star" wx:key="unique" wx:for="{{movie.stars.off}}" src="/assets/imgs/rating_star_small_off.png" />
-                            <view class="number">{{ movie.rating.average }}</view>
-                        </block>
 
-                        <block wx:else>
-                            暂无评分
-                        </block>
-                          
-                          
-                    </view>
-                </view>
+                <movie-item class="item" wx:for="{{ item.movies }}" wx:key="unique" wx:for-item="movie" movie = "{{ movie }}">
+
+                </movie-item>
+
             </scroll-view>
         </view>
     </view>

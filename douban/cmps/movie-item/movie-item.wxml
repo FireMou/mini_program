@@ -1,2 +1,19 @@
-<!--cmps/movie-item/movie-item.wxml-->
-<text>cmps/movie-item/movie-item.wxml</text>
+
+<view class="item">
+    <image class="playbill" src="{{ movie.images.large }}" />
+    <view class="title">
+        {{ movie.title }}
+    </view>
+    <view class="score">
+        <block wx:if="{{ movie.stars }}">
+            <image class="star" wx:key="unique" wx:for="{{movie.stars.on}}" src="/assets/imgs/rating_star_small_on.png" />
+            <image class="star" wx:if="{{movie.stars.half}}" src="/assets/imgs/rating_star_small_half.png" />
+            <image class="star" wx:key="unique" wx:for="{{movie.stars.off}}" src="/assets/imgs/rating_star_small_off.png" />
+            <view class="number">{{ movie.rating.average }}</view>
+        </block>
+
+        <block wx:else>
+            暂无评分
+        </block>
+    </view>
+</view>
