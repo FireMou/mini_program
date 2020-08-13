@@ -46,6 +46,14 @@ Page({
         // this.loadNewData(2);
         // this.loadNewData(3);
         // this.loadNewData(4);
+
+        // 两个颜色同时设置才有效，现在无法满足需求，要自定义设置
+        // wx.setNavigationBarColor({
+        //     frontColor: '#ffffff',
+        //     backgroundColor: '#42BD55'
+        // });
+
+
         this.loadDataFromDisk();
     },
 

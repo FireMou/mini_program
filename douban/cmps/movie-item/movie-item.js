@@ -20,6 +20,12 @@ Component({
      * 组件的方法列表
      */
     methods: {
+        detail: function() {
+            // 传送movie对象，可以用存储做，也可以使用全局对象，下面的方法是转换成字符串
 
+            wx.navigateTo({
+                url: `/pages/detail/detail?movie=${ JSON.stringify(this.data.movie) }`
+            });
+        }
     }
 })

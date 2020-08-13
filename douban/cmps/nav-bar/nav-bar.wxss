@@ -1,0 +1,5 @@
+/* cmps/nav-bar/nav-bar.wxss */
+
+.status {
+    background-color: red;
+}

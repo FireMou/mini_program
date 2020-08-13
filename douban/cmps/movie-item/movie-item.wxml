@@ -1,5 +1,5 @@
 
-<view class="item">
+<view class="item" bind:tap="detail">
     <image class="playbill" src="{{ movie.images.large }}" />
     <view class="title">
         {{ movie.title }}

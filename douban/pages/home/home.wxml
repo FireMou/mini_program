@@ -1,4 +1,7 @@
 <!--pages/home/home.wxml-->
+<nav-bar>
+
+</nav-bar>
 <view>
     <view class="search-wrapper">
         <view class="search">
