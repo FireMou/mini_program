@@ -60,6 +60,7 @@
 
 .row {
     margin-bottom: 30rpx;
+    height: 396rpx;
 }
 
 .items {

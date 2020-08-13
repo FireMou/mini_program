@@ -12,8 +12,12 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let title = options.title;
-        this.loadDiskData(title);
+        let navTitle = options.title;
+        wx.setNavigationBarTitle({
+            title: navTitle
+        });
+
+        this.loadDiskData(navTitle);
     },
 
     // 获取缓存数据展示
