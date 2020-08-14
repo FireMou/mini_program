@@ -11,5 +11,10 @@ Page({
             url: '/pages/agreement/agreement'
         });
 
+    },
+
+    back: function(evt) {
+        console.log(evt)
     }
+
 })

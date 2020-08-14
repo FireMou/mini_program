@@ -5,6 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
+        title: '详情',
         movies: []
     },
 
@@ -12,12 +13,10 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function(options) {
-        let navTitle = options.title;
-        wx.setNavigationBarTitle({
-            title: navTitle
-        });
+        let title = options.title;
 
-        this.loadDiskData(navTitle);
+        this.setData({ title });
+        this.loadDiskData(title);
     },
 
     // 获取缓存数据展示
@@ -30,6 +29,10 @@ Page({
             }
         });
 
+    },
+
+    back: function(evt) {
+        console.log(evt)
     },
 
     /**

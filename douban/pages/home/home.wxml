@@ -1,5 +1,5 @@
 <!--pages/home/home.wxml-->
-<nav-bar>
+<nav-bar backColor="#42BD55" title="首页" textColor="#ffffff" backShow="false" homeShow="false">
 
 </nav-bar>
 <view>

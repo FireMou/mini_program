@@ -1,4 +1,8 @@
 <view class="nav">
     <view class="status" style="{{ statusBarStyle }}"></view>
-    <view class="navbar" style="{{ navBarStyle }}"></view>
+    <view class="navbar" style="{{ navBarStyle }}">
+        <image bind:tap="back" wx:if="{{ backShow == 'true' }}" class="back" src="/assets/imgs/nav_back.png" mode="aspectFit" />
+        <image bind:tap="home" wx:if="{{ homeShow == 'true' }}" class="home" src="/assets/imgs/nav_home.png" mode="aspectFit" />
+        {{ title }}
+    </view>
 </view>

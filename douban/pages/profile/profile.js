@@ -28,4 +28,10 @@ Page({
             },
         ]
     },
+    login: function() {
+        wx.navigateTo({
+            url: '/pages/login/login'
+        });
+
+    }
 })

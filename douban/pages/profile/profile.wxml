@@ -1,18 +1,21 @@
 <!--pages/profile/profile.wxml-->
-<view class="container">
+<nav-bar title="我的" backShow="false" homeShow="false">
 
+</nav-bar>
+<view class="container">
+    
     <view>
         
         <view class="login-wrapper">
             <image class="" src="/assets/imgs/bg_mine_login.png" mode="aspectFill" />
             
-            <view class="login">登录</view>
+            <view class="login" bind:tap="login">登录</view>
         </view>
 
         <view class="items-wrapper">
             <view class="title-wrapper">
                 <view class="title">我的书影音</view>
-                <view class="check">
+                <view class="check" bind:tap="login">
                     登录查看
                     <view class="arrow"></view>
                 </view>

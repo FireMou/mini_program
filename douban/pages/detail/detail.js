@@ -5,7 +5,7 @@ Page({
      * 页面的初始数据
      */
     data: {
-
+        title: '详情'
     },
 
     /**
@@ -14,9 +14,13 @@ Page({
     onLoad: function(options) {
         const movie = JSON.parse(options.movie);
         // console.log(movie);
-        wx.setNavigationBarTitle({
+        // wx.setNavigationBarTitle({
+        //     title: movie.title
+        // });
+
+        this.setData({
             title: movie.title
-        });
+        })
 
     },
 

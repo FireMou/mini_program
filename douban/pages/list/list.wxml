@@ -1,4 +1,7 @@
 <!--pages/list/list.wxml-->
+<nav-bar title="{{ title }}" bind:backTap="back">
+
+</nav-bar>
 <view class="container">
     <movie-item class="item" wx:for="{{ movies }}" wx:key="unique" wx:for-item="movie" movie="{{ movie }}">
 

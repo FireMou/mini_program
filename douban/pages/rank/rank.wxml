@@ -1,2 +1,8 @@
 <!--pages/rank/rank.wxml-->
-<text>pages/rank/rank.wxml</text>
+<nav-bar title="榜单" backShow="false" homeShow="false">
+
+</nav-bar>
+<view>
+    dhakjsdkahkjsad
+</view>
+  

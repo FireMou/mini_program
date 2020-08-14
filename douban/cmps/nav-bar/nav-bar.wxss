@@ -1,5 +1,24 @@
 /* cmps/nav-bar/nav-bar.wxss */
 
-.status {
-    background-color: red;
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.back,
+.home {
+    width: 36rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.back {
+    left: 20rpx;
+}
+
+.home {
+    left: 80rpx;
 }
