@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/d-database/d-database",
+    "pages/d-storage/d-storage",
+    "pages/d-cloudfunc/d-cloudfunc",
+    "pages/index/index",
+    "pages/userConsole/userConsole",
+    "pages/storageConsole/storageConsole",
+    "pages/databaseGuide/databaseGuide",
+    "pages/addFunction/addFunction",
+    "pages/deployFunctions/deployFunctions",
+    "pages/chooseLib/chooseLib",
+    "pages/openapi/openapi",
+    "pages/openapi/serverapi/serverapi",
+    "pages/openapi/callback/callback",
+    "pages/openapi/cloudid/cloudid",
+    "pages/im/im",
+    "pages/im/room/room"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/d-database/d-database",
+      "text": "云数据库"
+    },{
+      "pagePath": "pages/d-storage/d-storage",
+      "text": "云存储"
+    },{
+      "pagePath": "pages/d-cloudfunc/d-cloudfunc",
+      "text": "云函数"
+    },{
+      "pagePath": "pages/index/index",
+      "text": "官方"
+    }]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
