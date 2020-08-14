@@ -33,7 +33,8 @@ Component({
      */
     data: {
         statusBarStyle: '',
-        navBarStyle: ''
+        navBarStyle: '',
+        topHeight: 0
     },
 
     /**
@@ -64,8 +65,8 @@ Component({
             background-color: ${this.data.backColor};
             color: ${this.data.textColor};
             `;
-            console.log(statusBarStyle, navBarStyle);
-            this.setData({ statusBarStyle, navBarStyle });
+            const topHeight = wx.db.statusBarHeight + wx.db.navBarHeight;
+            this.setData({ statusBarStyle, navBarStyle, topHeight });
         }
     }
 })

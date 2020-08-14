@@ -1,5 +1,12 @@
 /* cmps/nav-bar/nav-bar.wxss */
 
+.container {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
 .navbar {
     display: flex;
     justify-content: center;
@@ -7,18 +14,22 @@
     position: relative;
 }
 
-.back,
-.home {
-    width: 36rpx;
-    height: 100%;
+.icons image {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.icons {
     position: absolute;
     top: 0;
-}
-
-.back {
-    left: 20rpx;
+    left: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30rpx;
 }
 
 .home {
-    left: 80rpx;
+    margin-left: 30rpx;
 }

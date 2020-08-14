@@ -1,8 +1,28 @@
-<view class="nav">
-    <view class="status" style="{{ statusBarStyle }}"></view>
-    <view class="navbar" style="{{ navBarStyle }}">
-        <image bind:tap="back" wx:if="{{ backShow == 'true' }}" class="back" src="/assets/imgs/nav_back.png" mode="aspectFit" />
-        <image bind:tap="home" wx:if="{{ homeShow == 'true' }}" class="home" src="/assets/imgs/nav_home.png" mode="aspectFit" />
-        {{ title }}
+<!--cmps/nav-bar/nav-bar.wxml-->
+
+<view>
+    <view style="height:{{ topHeight }}px">
+        
     </view>
+    
+    <view class="container">
+
+        <view style="{{ statusBarStyle }}">
+            
+        </view>
+        
+        <view class="navbar" style="{{ navBarStyle }}">
+            
+            {{ title}}
+            
+            <view class="icons">
+
+                <image class="back" bind:tap="back" wx:if="{{ backShow == 'true' }}" src="/assets/imgs/nav_back.png" />
+                
+                <image class="home" bind:tap="home" wx:if="{{ homeShow == 'true' }}" src="/assets/imgs/nav_home.png" />
+            </view>
+        </view>
+    </view>
+
+
 </view>
