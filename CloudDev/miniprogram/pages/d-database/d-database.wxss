@@ -1,1 +1,5 @@
 /* pages/d-database/d-database.wxss */
+
+button {
+    font-weight: normal;
+}

@@ -1,2 +1,20 @@
 <!--pages/d-database/d-database.wxml-->
-<text>pages/d-database/d-database.wxml</text>
+<view class="container">
+
+    <button bind:tap="addData">
+        增加条目
+    </button>
+    
+    <button bind:tap="removeData">
+        删除条目
+    </button>
+    
+    <button bind:tap="updateData">
+        更改条目
+    </button>
+    
+    <button bind:tap="queryData">
+        查询条目
+    </button>
+
+</view>
