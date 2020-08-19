@@ -1,2 +1,4 @@
 <!--pages/d-storage/d-storage.wxml-->
-<text>pages/d-storage/d-storage.wxml</text>
+<image class="img" src="cloud://dv-dev-ohahi.6476-dv-dev-ohahi-1302869922/83e69bc9gy1gh1r6jf14pg20ch06xhdz.gif" />
+  
+<button bind:tap="uploadFile">上传文件</button>
