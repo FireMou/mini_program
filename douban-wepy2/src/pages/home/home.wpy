@@ -1,0 +1,33 @@
+<style lang="less">
+</style>
+
+<template>
+  <view class="container">
+    wahaha
+  </view>
+</template>
+
+<script>
+  import wepy from '@wepy/core'
+
+  wepy.page({
+    data: {
+    },
+
+    computed: {
+    },
+
+    methods: {
+    },
+    component: {
+
+    }
+  });
+</script>
+<config>
+{
+    navigationBarTitleText: 'douban Demo',
+    usingComponents: {
+    }
+}
+</config>
